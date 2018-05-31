@@ -17,9 +17,9 @@ public:
 	Pixel(Color color) : color(color){}
 
 	void setColor(Color color) { this->color = color; }
-	void put(int Y, int X, Screen& screen){ 
+	void put(Screen& screen, Coordinate pos){ 
 		attron(COLOR_PAIR(color.get())); 
-		screen.putch(Y, X, '.');
+		screen.putch(pos, ' ');
 		attroff(COLOR_PAIR(color.get()));
 	}
 };
