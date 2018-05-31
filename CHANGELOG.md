@@ -1,7 +1,7 @@
 # Change Log
 
 ## [v0.0.2](https://github.com/azime/Epoch/tree/v0.0.2)
-[Full Changelog](https://github.com/azimex/Epoch/compare/v0.0.1..HEAD)
+[Full Changelog](https://github.com/azimex/Epoch/compare/v0.0.1...HEAD)
 -	Create Coordinate and Image class
 -	Change all refereces to position on screen to a Coordinate object
 
