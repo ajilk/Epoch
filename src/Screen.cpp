@@ -40,8 +40,8 @@ bool Screen::kbhit(){
 		return false;
 }
 
-void Screen::putch(int Y, int X, char ch){
-	mvaddch(Y, X, ch); 
+void Screen::putch(Coordinate pos, char ch){
+	mvaddch(pos.Y, pos.X, ch); 
 	// refresh();
 }
 

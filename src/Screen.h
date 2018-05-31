@@ -4,6 +4,7 @@
 #include <ncurses.h>
 #include <string>
 #include <stdlib.h>	//exit()
+#include "Coordinate.h"
 
 class Screen{
 private:
@@ -14,7 +15,7 @@ public:
 	int getRows() { return rows; }
 	int getColumns() { return columns; }
 	bool kbhit();
-	void putch(int Y, int X, char ch);
+	void putch(Coordinate pos, char ch);
 	void clr();
 	void rfresh();
 	~Screen();
