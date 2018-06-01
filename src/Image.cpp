@@ -1,8 +1,10 @@
 #include "Image.h"
 
 /*
-	Function: Constructor. Constructs an Image based on the passed path 
+	Function: 	Constructor. Constructs an Image based on the passed path 
 				to image
+	@param:		Path to image file
+	@return:	-
 */
 Image::Image(string path){
 	// Initialize the 8 pixel colors
@@ -23,7 +25,7 @@ Image::Image(string path){
 	@param:		path: path to image
 	@return:	void
 */
-void Image::set(string path){
+void Image::set(std::string path){
 	image.clear();
 	char ch;
 	ifstream infile;
@@ -36,12 +38,12 @@ void Image::set(string path){
 /*
 	Function: 	prints image 
 	@param:		screen 	- where image is displayed
-				pos		- top left corner of the image's position
+				lc		- top left corner of the image's position
 				color	- use default color supplied from the file
 							(or overwrite by passing color)
 	@return:	void
 */
-void Image::print(Screen &screen, Coordinate leftCorner, int color){
+void Image::print(Screen &screen, Coordinate lc, int color){
 	int y=0, x=0;
 	int current = 0;	// Marks vector index
 	int currColor;
@@ -53,12 +55,10 @@ void Image::print(Screen &screen, Coordinate leftCorner, int color){
 		}
 		else{
 			x++;
-			if(color == -1)
-				currColor = image[current] - '0';	
+			if(color == -1) currColor = image[current] - '0';	
 			// Take care of the empty spaces 
-			else
-				currColor = (image[current] - '0' > 0) ? color : 0;
-			pixel[currColor].put(screen, * new Coordinate(y+leftCorner.Y,x+leftCorner.X));
+			else currColor = (image[current] - '0' > 0) ? color : 0;
+			pixel[currColor].put(screen, * new Coordinate(y+lc.Y,x+lc.X));
 		}
 		current++;
 	}

@@ -8,18 +8,17 @@
 
 using namespace std;
 /*
-	Class: Image refers an array of vectors that hold characters
+	Class: Image refers to a vector of characters
 */
 class Image{
 private:
-	// int WIDTH;
 	vector<char> image;
-	Pixel pixel[8];		// Represents 8 available colors
+	Pixel pixel[8];		// Represents the 8 available colors
 public:
 	Image() : Image("../resources/default.txt") {};
-	Image(string path);
+	Image(std::string path);
 	vector<char> get() { return image; }
-	void set(string path);
+	void set(std::string path);
 	void print(Screen &screen, Coordinate pos, int color = -1);
 };
 
