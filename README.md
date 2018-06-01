@@ -9,4 +9,10 @@ _Make:_
 _Run:_  
 `make run;`
 
+_Run with options_  
+`./time 2 5 "+%M:%S"`  
+arg1 = font  
+arg2 = color (0-7)  
+arg3 = date format  
+
 ### Epoch is part of the [Concept](https://github.com/azimex/Concept) Series

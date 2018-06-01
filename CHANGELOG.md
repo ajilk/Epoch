@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.1.0](https://github.com/azime/Epoch/tree/v0.1.0)
+[Full Changelog](https://github.com/azimex/Epoch/compare/v0.1.0...HEAD)
+-	implement working digital clock 
+-	implement the option customize format
+-	add the option to pass arguments to the program
+
 ## [v0.0.2](https://github.com/azime/Epoch/tree/v0.0.2)
 [Full Changelog](https://github.com/azimex/Epoch/compare/v0.0.1...HEAD)
 -	Create Coordinate and Image class
