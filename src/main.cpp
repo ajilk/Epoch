@@ -63,6 +63,9 @@ int main(int argc, char **argv){
 				case '8': digit[8].print(screen, prev, color);	break;
 				case '9': digit[9].print(screen, prev, color);	break;
 				case ':': colon.print(screen, prev, color);	break;
+				case '-': dash.print(screen, prev, color);	break;
+				case '/': slash.print(screen, prev, color);	break;
+				case ' ': x.print(screen, prev, color);	break;
 				default: break;
 			}
 			prev.X +=10;
