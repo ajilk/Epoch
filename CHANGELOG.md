@@ -4,7 +4,7 @@
 [Full Changelog](https://github.com/azimex/Epoch/compare/v0.0.1...HEAD)
 -	Create Coordinate and Image class
 -	Change all refereces to position on screen to a Coordinate object
--	add the option to override color [476289764c19](https://github.com/azimex/Epoch/commit/476289764)
+-	add the option to override color [(commit)](https://github.com/azimex/Epoch/commit/476289764)
 
 ## [v0.0.1](https://github.com/azimex/Epoch/tree/v0.0.1) (2018-05-31)
 -	Initial commit
