@@ -42,7 +42,6 @@ bool Screen::kbhit(){
 
 void Screen::putch(Coordinate pos, char ch){
 	mvaddch(pos.Y, pos.X, ch); 
-	// refresh();
 }
 
 void Screen::clr(){
