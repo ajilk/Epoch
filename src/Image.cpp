@@ -18,17 +18,33 @@ Image::Image(string path){
 	infile.close();
 }
 
+/*
+	Funtion: 	sets image to the image from the given path
+	@param:		path: path to image
+	@return:	void
+*/
+void Image::set(string path){
+	image.clear();
+	char ch;
+	ifstream infile;
+	infile.open(path);
+	while(infile.get(ch))
+		image.push_back(ch);
+	infile.close();
+}
 
 /*
 	Function: 	prints image 
 	@param:		screen 	- where image is displayed
 				pos		- top left corner of the image's position
+				color	- use default color supplied from the file
+							(or overwrite by passing color)
 	@return:	void
 */
-void Image::print(Screen &screen, Coordinate leftCorner){
+void Image::print(Screen &screen, Coordinate leftCorner, int color){
 	int y=0, x=0;
 	int current = 0;	// Marks vector index
-	int color = 0;		// Default color black
+	int currColor;
 	while(current < image.size()){
 		if(image[current] == '\n'){
 			// Imagine a typewriter)
@@ -37,9 +53,12 @@ void Image::print(Screen &screen, Coordinate leftCorner){
 		}
 		else{
 			x++;
-			// Grab the color of the current pixel
-			color = image[current] - '0';	
-			pixel[color].put(screen, * new Coordinate(y+leftCorner.Y,x+leftCorner.X));
+			if(color == -1)
+				currColor = image[current] - '0';	
+			// Take care of the empty spaces 
+			else
+				currColor = (image[current] - '0' > 0) ? color : 0;
+			pixel[currColor].put(screen, * new Coordinate(y+leftCorner.Y,x+leftCorner.X));
 		}
 		current++;
 	}

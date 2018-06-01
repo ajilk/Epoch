@@ -19,7 +19,8 @@ public:
 	Image() : Image("../resources/default.txt") {};
 	Image(string path);
 	vector<char> get() { return image; }
-	void print(Screen &screen, Coordinate pos);
+	void set(string path);
+	void print(Screen &screen, Coordinate pos, int color = -1);
 };
 
 #endif // DIGIT_H
