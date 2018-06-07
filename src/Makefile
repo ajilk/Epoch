@@ -1,4 +1,4 @@
-OBJ			= time
+OBJ			= epoch
 CC			= g++
 OBJECTS		= main.o Screen.o Pixel.o Color.o Image.o
 LDFLAGS		= -lncurses
