@@ -6,7 +6,7 @@ A Digital Clock written from ground up in C++ using ncurses
 _Clone:_  
 `git clone https://github.com/azimex/Epoch.git`  
 _Make:_  
-`cd Epoch; make;`  
+`cd Epoch/src; make;`  
 _Run:_  
 `make run;`
 
