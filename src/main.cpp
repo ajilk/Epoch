@@ -43,6 +43,7 @@ int main(int argc, char **argv){
 	Image colon("../resources/colon.txt");
 	Image dash("../resources/dash.txt");
 	Image slash("../resources/slash.txt");
+	Image x("../resources/default.txt");
 
 	ifstream infile;
 	Coordinate prev(1,2);

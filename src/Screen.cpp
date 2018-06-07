@@ -8,8 +8,8 @@ Screen::Screen(){
 	cbreak();
 	noecho();
 	use_default_colors();
-	border(ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE, 
-			ACS_ULCORNER, ACS_URCORNER, ACS_LLCORNER, ACS_LRCORNER);
+	// border(ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE, 
+	// 		ACS_ULCORNER, ACS_URCORNER, ACS_LLCORNER, ACS_LRCORNER);
 
 	//Check if there is support for color
 	if(!has_colors()){
@@ -46,8 +46,8 @@ void Screen::putch(Coordinate pos, char ch){
 
 void Screen::clr(){
 	clear();
-	border(ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE, 
-			ACS_ULCORNER, ACS_URCORNER, ACS_LLCORNER, ACS_LRCORNER);
+	// border(ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE, 
+	// 		ACS_ULCORNER, ACS_URCORNER, ACS_LLCORNER, ACS_LRCORNER);
 }
 
 void Screen::rfresh(){
