@@ -1,5 +1,5 @@
 # Epoch
-<br/> <br/> <img src="demo.gif" width="400" /> <br/> <br/>
+<br/> <img src="demo.gif" width="400" /> <br/>
 
 A Digital Clock written from ground up in C++ using ncurses
 
